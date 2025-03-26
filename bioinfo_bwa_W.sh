@@ -41,6 +41,6 @@ for ((j = 0; j < i; j++)); do
 done
 ##
 
-for k in mt_W*.sam; do l=$(echo "$k" | sed 's/\.[^.]*$//'); samtools sort $k > ${l}_s.bam; done
+for k in ${sample_name}_W*.sam; do l=$(echo "$k" | sed 's/\.[^.]*$//'); samtools sort $k > ${l}_s.bam; done
 
-for f in mt_W*_s.bam; do l=$(echo "$f" | sed 's/\.[^.]*$//'); bcftools mpileup -Ou -f $bcf_ref $f | bcftools call -vmO v -o ${l}.vcf; done
+for f in ${sample_name}_W*_s.bam; do l=$(echo "$f" | sed 's/\.[^.]*$//'); bcftools mpileup -Ou -f $bcf_ref $f | bcftools call -vmO v -o ${l}.vcf; done
