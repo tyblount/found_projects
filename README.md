@@ -1,4 +1,4 @@
-If you download this repo and gzip the two fastq files, you should be able to run
+If you download this repo and gzip the two fastq files (ensure that the .gz is no longer on the files by passing the -d parameter for gzip), you should be able to run
 
 ```
 bash bioinfo_bwa_W.sh test
